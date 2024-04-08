@@ -33,6 +33,12 @@ def python(text='is cool'):
     return "Python {}".format(text.replace('_', ' '))
 
 
+@app.route('/number/<int:n>', stricl_slashes=False)
+def number(n):
+    """ display "<n> is a number" if n is int"""
+    return "{} is a number".format(n)
+
+
 if __name__ == '__main__':
     """ Main Function """
     app.run(host='0.0.0.0', port='5000')
