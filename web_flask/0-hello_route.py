@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 from flask import Flask
-''' Start a Flask web app'''
+""" Start a Flask web app """
 app = Flask(__name__)
 
 
 @app.route('/', strict_slashes=False)
 def hello():
-    '''display "Hello HBNB!" '''
+    """display "Hello HBNB!" """
     return "Hello HBNB!"
 
 
