@@ -33,7 +33,7 @@ def python(text='is cool'):
     return "Python {}".format(text.replace('_', ' '))
 
 
-@app.route('/number/<int:n>', stricl_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def number(n):
     """ display "<n> is a number" if n is int"""
     return "{} is a number".format(n)
