@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from flask import Flask
 ''' Start a Flask web app'''
 app = Flask(__name__)
@@ -31,4 +32,5 @@ def python(text='is cool'):
 
 
 if __name__ == '__main__':
+    """ Main Function """
     app.run(host='0.0.0.0', port='5000')
