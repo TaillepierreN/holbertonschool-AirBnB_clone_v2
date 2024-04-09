@@ -17,8 +17,8 @@ def shutdown(exception):
 @app.route('/states_list', strict_slashes=False)
 def states_list():
     """display a list of states"""
-    list_of_states = storage.all(State).values()
-    return render_template('7-states_list.html', list_of_states=list_of_states)
+    all_states = storage.all(State)
+    return render_template('7-states_list.html', all_states=all_states)
 
 
 if __name__ == '__main__':
