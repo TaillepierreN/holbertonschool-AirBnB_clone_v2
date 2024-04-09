@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 
 @app.teardown_appcontext
-def shutdown(exception=None):
+def shutdown(exception):
     """close the storage after each requests"""
     storage.close()
 
