@@ -18,15 +18,8 @@ def shutdown(exception):
 @app.route('/hbnb_filters', strict_slashes=False)
 def filters():
     """return list of states and amenities"""
-    temp = storage.all(State)
-    states = []
-    for elem in temp:
-        states.append(temp[elem])
-
-    temp = storage.all(Amenity)
-    amenities = []
-    for elem in temp:
-        amenities.append(temp[elem])
+    amenities = storage.all(Amenity)
+    states = storage.all(State)
 
     return render_template('10-hbnb_filters.html',
                            states=states, amenities=amenities)
