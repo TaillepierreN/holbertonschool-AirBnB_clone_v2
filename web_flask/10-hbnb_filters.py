@@ -21,14 +21,6 @@ def filters():
     amenities = storage.all(Amenity).values()
     states = storage.all(State).values()
 
-    amenities = sorted(amenities, key=lambda x: x.name)
-    states = sorted(states, key=lambda x: x.name)
-
-    for state in states:
-        if storage.__class__.__name__ == 'DBStorage':
-            state.cities = sorted(state.cities, key=lambda x: x.name)
-        else:
-            state.cities = sorted(state.cities(), key=lambda x: x.name)
     return render_template('10-hbnb_filters.html',
                            states=states, amenities=amenities)
 
